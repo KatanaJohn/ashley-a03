@@ -1,5 +1,4 @@
 package baseline;
-import java.util.Scanner;
 
 /*
 Prompt for the card’s APR. Do the division internally.
@@ -19,28 +18,17 @@ n = -(1/30) * log(1 + b/p * (1 - (1 + i)^30)) / log(1 + i)
 
 public class Solution26 {
 
-    private static final Scanner input = new Scanner(System.in);
-
     public static void main(String[] args)
     {
+
+
         PaymentCalculator calculator = new PaymentCalculator();
+        double payoffTime = calculator.calculateMonthsUntilPaidOff();
+        payoffTime = Math.ceil(payoffTime);
+        System.out.printf("It will take you %.0f months to pay off this card", payoffTime);
     }
 
-    private int takeBalanceInput()
-    {
 
-    }
-
-
-    private int takeAprInput()
-    {
-
-    }
-
-    private int takeMonthlyInput()
-    {
-
-    }
 
 
 
