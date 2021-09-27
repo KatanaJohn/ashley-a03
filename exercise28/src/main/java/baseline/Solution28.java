@@ -13,17 +13,35 @@ import java.util.Scanner;
 
 
 public class Solution28 {
+
     private static final Scanner input = new Scanner(System.in);
 
 
     public static void main(String[] args) {
         //create new solution
         Solution28 solution = new Solution28();
+
+        //calculate the sum of the 5 numbers
+        int sum = solution.calculator();
+
+        //print out the calculated sum of the 5 numbers
+        System.out.printf("The total is %d", sum);
     }
 
     private int calculator()
     {
-        
+        //sum variable
+        int sum = 0;
+
+        //for loop adding new number that was input to sum
+        for(int i = 0; i < 5; i++)
+        {
+            System.out.println("Enter a number: ");
+            sum +=input.nextInt();
+        }
+
+        //return sum to main
+        return sum;
     }
 
 }
