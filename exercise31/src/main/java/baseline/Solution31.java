@@ -1,5 +1,7 @@
-package baseline;
-
+/*
+ * UCF COP3330 Fall 2021 Assignment 3 Solution
+ *  Copyright 2021 John Ashley
+ */
 
 
 //function to get resting heart  rate. Ensure a number is entered
@@ -8,8 +10,9 @@ package baseline;
 //display the results
 //TargetHeartRate = (((220 − age) − restingHR) × intensity) + restingHR
 
-
+package baseline;
 import java.util.Scanner;
+
 
 public class Solution31 {
 
