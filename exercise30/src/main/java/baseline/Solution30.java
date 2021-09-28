@@ -5,7 +5,6 @@
 
 
 package baseline;
-import java.util.Scanner;
 
 //create makeMultiplicationTable function
 //nested for loop using two variables.
@@ -16,17 +15,31 @@ import java.util.Scanner;
 
 public class Solution30 {
 
-    private static final Scanner input = new Scanner(System.in);
-
 
     public static void main(String[] args)
     {
-
+        //create new solution
+        Solution30 solution = new Solution30();
+        solution.makeMultiplicationTable();
     }
 
 
     private void makeMultiplicationTable()
     {
+        int a;
+        int b;
 
+        //cycles through first number 1-12
+        for(a = 1; a <=12; a++)
+        {
+            //multiplies a with each number from 1-12 then prints
+            for(b=1; b <=12; b++)
+            {
+                System.out.printf("%4d", a*b);
+
+            }
+            //prints new line after each numbers' possible multiples.
+            System.out.printf("%n");
+        }
     }
 }
