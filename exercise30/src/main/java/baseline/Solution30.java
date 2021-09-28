@@ -21,6 +21,12 @@ public class Solution30 {
 
     public static void main(String[] args)
     {
-        
+
+    }
+
+
+    private void makeMultiplicationTable()
+    {
+
     }
 }
