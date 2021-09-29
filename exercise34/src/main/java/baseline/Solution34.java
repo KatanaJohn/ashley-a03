@@ -27,14 +27,22 @@ public class Solution34 {
     {
         Solution34 solution = new Solution34();
 
+        //initialize number of employees
         int nEmployees = 5;
 
+        //initialize list
         List employeesList;
+        //create list of employees
         employeesList = solution.createEmployeesList();
+        //display the employees before removing one
         solution.displayEmployees(nEmployees, employeesList);
+        //take input for the employee someone wants to remove
         String removedEmployee = solution.removeEmployeeInput();
+        //remove the employee that was input
         employeesList = solution.removeEmployee(employeesList, removedEmployee);
+        //decrease the employee count
         nEmployees = solution.decreaseEmployeeCount(nEmployees, employeesList);
+        //display the employees after the removal
         solution.displayEmployees(nEmployees, employeesList);
     }
 
@@ -54,8 +62,10 @@ public class Solution34 {
 
     private void displayEmployees(int nEmployees, List employeeList)
     {
+        //display the number of employees
         System.out.printf("There are %d Employees%n", nEmployees);
 
+        //display the names of all employees
         for(int i = 0; i < nEmployees; i++)
         {
             System.out.printf("%s%n", employeeList.get(i));
@@ -65,6 +75,7 @@ public class Solution34 {
     public List removeEmployee(List employeeList, String removedEmployee)
     {
 
+        //remove the employee from the list
         employeeList.remove(removedEmployee);
 
         return employeeList;
@@ -72,6 +83,7 @@ public class Solution34 {
 
     private String removeEmployeeInput()
     {
+        //ask for the name of the employee user wants to remove
         System.out.println("Enter an employee name to remove: ");
         return input.nextLine();
 
@@ -79,6 +91,7 @@ public class Solution34 {
 
     public int decreaseEmployeeCount(int nEmployees, List employeesList)
     {
+        //if an employee was removed, decrease nemployees size. If no employee was removed, just return the same value
         if(employeesList.size() < 5)
         {
             nEmployees--;
