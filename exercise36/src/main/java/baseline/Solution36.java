@@ -7,8 +7,8 @@
 pseudocode
 create an array list of integers that prompts for numbers until done is entered
 calculate for the average of the numbers
-find the minimum number by cycling through array to find lowest
-find the max number by cycling through array to find highest
+find the minimum number by cycling through array to find lowest number
+find the max number by cycling through array to find highest number
 find the population standard deviation
  */
 
