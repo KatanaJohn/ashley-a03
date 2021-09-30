@@ -11,10 +11,8 @@
  */
 
 package baseline;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Scanner;
-
 
 
 public class Solution38 {
@@ -25,20 +23,76 @@ public class Solution38 {
     public static void main(String[] args)
     {
         Solution38 solution = new Solution38();
-    }
 
-    private List promptNewList()
-    {
+        int[] numbersList = solution.promptNewList();
 
-    }
+        numbersList = solution.filterEvenNumbers(numbersList);
 
-    private List filterEvenNumbers(List<Integer> numberList)
-    {
+        solution.printNewList(numbersList);
 
     }
 
-    private void printNewList(List<Integer> numberList)
+    private int[] promptNewList()
     {
+
+        System.out.println("Enter a list of numbers, separated by spaces: ");
+        String integers = input.nextLine();
+        int[] numberArray = Arrays.stream(integers.split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
+
+        for (int j : numberArray)
+        {
+            System.out.println(j);
+        }
+        return numberArray;
+    }
+
+    private int[] filterEvenNumbers(int[] numbersList)
+    {
+        //check for each number in the list
+        for(int i = 0; i < numbersList.length;)
+        {
+            //if the list is NOT equal to 0 when moduled by 2 (aka is odd), remove it
+            if (numbersList[i] % 2 != 0)
+            {
+                //make a copy of the original list
+                int[] copyOfNumbersList = new int[numbersList.length - 1];
+
+
+                for (int j = 0, k = 0; j < numbersList.length; j++)
+                {
+                    //skip the index of the odd number
+                    if (j == i)
+                    {
+                        continue;
+                    }
+
+                    //copy all elements from original array except specific index
+                    copyOfNumbersList[k++] = numbersList[j];
+
+                }
+                //make the original list equal to the new list
+                numbersList = copyOfNumbersList;
+            }
+            //if it is equal to 0 when moduled by 2 (aka even), ignore and advance i by 1.
+            else
+            {
+                i++;
+            }
+        }
+        return numbersList;
+    }
+
+
+
+    private void printNewList(int[] newNumberList)
+    {
+        System.out.print("The even numbers are ");
+        for(int i = 0; i < newNumberList[i]; i++)
+        {
+            System.out.printf("%d ", newNumberList[i]);
+        }
 
     }
 
