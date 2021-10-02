@@ -35,11 +35,19 @@ public class Solution30 {
             //multiplies a with each number from 1-12 then prints
             for(b=1; b <=12; b++)
             {
-                System.out.printf("%4d", a*b);
+                int c = doMath(a, b);
+                System.out.printf("%4d", c);
 
             }
             //prints new line after each numbers' possible multiples.
             System.out.printf("%n");
         }
+    }
+
+
+    public int doMath(int a, int b)
+    {
+        //take a and b and multiply/return the value
+        return a*b;
     }
 }

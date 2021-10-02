@@ -4,38 +4,39 @@ import java.util.Scanner;
 public class PaymentCalculator {
 
     private static final Scanner input = new Scanner(System.in);
+    private double balance;
+    private double APR;
+    private double payment;
 
     public double calculateMonthsUntilPaidOff()
     {
-        double balance = takeBalanceInput();
-        double APR = takeAprInput();
-        double monthlyPayment = takeMonthlyInput();
+        //get the daily rate
         double dailyRate = APR / 365.0;
-        return -((1.0/30) * Math.log(1 + (Math.round(balance/monthlyPayment*100)/100.0) * (1 - Math.pow((1 + dailyRate), 30))) / Math.log(1+ dailyRate));
+        //calculate the pay off time/months to pay off card
+        return Math.ceil(-((1.0/30) * Math.log(1 + (Math.round(balance/payment*100)/100.0) * (1 - Math.pow((1 + dailyRate), 30))) / Math.log(1+ dailyRate)));
     }
 
-    private double takeBalanceInput()
+
+    public double takeBalanceInput(double balance)
     {
-        double balance;
-        System.out.println("What is your balance? ");
-        balance = input.nextDouble();
+        //get the input for balance
+        this.balance = balance;
         return balance;
     }
 
 
-    private double takeAprInput()
+    public double takeAprInput(double APR)
     {
-        double APR;
-        System.out.println("What is the APR on the card (as a percent)? ");
-        APR = input.nextInt() / 100.0;
+
+        //Get input for APR and divide by 100
+        this.APR = APR / 100.0;
         return APR;
     }
 
-    private double takeMonthlyInput()
+    public double takeMonthlyInput(double payment)
     {
-        double payment;
-        System.out.println("What is the monthly payment you can make? ");
-        payment = input.nextDouble();
+        //Get input for monthly payment
+        this.payment = payment;
         return payment;
     }
 }

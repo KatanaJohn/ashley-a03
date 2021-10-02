@@ -1,0 +1,5 @@
+
+c	java:S116"NRename this field "APR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËˆÙ¶
+?
+java:S1068")Remove this unused "input" private field.(‹ì‡²
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÍù

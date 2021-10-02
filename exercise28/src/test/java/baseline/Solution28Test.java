@@ -10,8 +10,9 @@ class Solution28Test {
     {
         Solution28 solution = new Solution28();
 
-        int expected = 15;
-        int actual = 15;
+        int expected = 12;
+        int numberArray[] = new int[]{1, 1, 0, 3, 7};
+        int actual = solution.calculator(numberArray);
         assertEquals(expected, actual);
         //int actual
     }

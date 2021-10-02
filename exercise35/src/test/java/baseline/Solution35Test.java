@@ -23,7 +23,7 @@ class Solution35Test {
         playerList.add("Guillermo");
         playerList.add("Hollander");
 
-        
+
     }
 
 }

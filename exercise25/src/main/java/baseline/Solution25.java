@@ -97,7 +97,7 @@ public class Solution25 {
 
     private void output(int passwordStrength, String password)
     {
-        //state the strength of the password
+        //state the strength of the password 
         if(passwordStrength == 0)
         {
             System.out.printf("The password %s is of an unknown strength", password);

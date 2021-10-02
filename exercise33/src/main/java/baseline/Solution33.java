@@ -19,7 +19,7 @@ import java.util.Random;
 public class Solution33 {
 
     private static final Scanner input = new Scanner(System.in);
-
+    Random rand = new Random();
 
     public static void main(String[] args)
     {
@@ -31,7 +31,8 @@ public class Solution33 {
 
         int number = solution.generateNumber();
 
-        solution.generateResponse(magicBall, number);
+        String response = solution.generateResponse(magicBall, number);
+        System.out.println(response);
     }
 
     private void promptQuestion()
@@ -42,25 +43,56 @@ public class Solution33 {
 
     private String[] createMagicBall()
     {
-        String[] magicBall  = new String[50];
+        //create new string array
+        String[] magicBall  = new String[5];
+        //add all the possible responses
         magicBall[0] = "Yes";
         magicBall[1] = "No";
         magicBall[2] = "Maybe";
         magicBall[3] = "Ask again later.";
+        //return string array
         return magicBall;
     }
 
     private int generateNumber()
     {
-        Random rand = new Random();
+        //initialize random
+
         int number;
-        number = rand.nextInt(4);
+        //randomly select a number from 0-3 and return it
+        number = this.rand.nextInt(4);
         return number;
     }
 
-    private void generateResponse(String[] magicBall, int number)
+    public String generateResponse(String[] magicBall, int number)
     {
-        System.out.printf("%s", magicBall[number]);
+        String response;
+
+        //depending on the number randomly chosen, set the response string equal to the one from the magic ball index
+        if(number == 0)
+        {
+            response = magicBall[0];
+            return response;
+        }
+        else if(number == 1)
+        {
+            response = magicBall[1];
+            return response;
+        }
+        else if(number == 2)
+        {
+            response = magicBall[2];
+            return response;
+        }
+        else if(number == 3)
+        {
+            response = magicBall[3];
+            return response;
+        }
+
+        //if not equal to any of them somehow, return invalid.
+        return "Invalid";
+
     }
 
 }
