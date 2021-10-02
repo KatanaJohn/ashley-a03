@@ -15,6 +15,7 @@ find the population standard deviation
 package baseline;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -32,12 +33,19 @@ public class Solution36 {
 
         //gets the average and prints it
         double average = solution.average(numberList);
+        System.out.printf("The average is: %.1f%n", average);
         //gets the minimum
         solution.min(numberList);
+        int min = solution.min(numberList);
+        System.out.printf("The minimum is %d%n", min);
         //gets the maximum
         solution.max(numberList);
+        int max = solution.max(numberList);
+        System.out.printf("The maximum is %d%n", max);
+
         //gets the std
-        solution.std(numberList, average);
+        double standardDev = solution.std(numberList, average);
+        System.out.printf("The standard deviation is %.2f%n", standardDev);
 
     }
 
@@ -80,7 +88,7 @@ public class Solution36 {
         return input.nextLine();
     }
 
-    private double average(ArrayList<Integer> integerList)
+    public double average(List<Integer> integerList)
     {
 
         double average = 0;
@@ -92,44 +100,44 @@ public class Solution36 {
 
         //divide by the amount of numbers in the list
         average /= integerList.size();
-        //print out the average
-        System.out.printf("The average is: %.1f%n", average);
         //return the average (to use in std)
         return average;
 
     }
 
-    private void max(ArrayList<Integer> integerList)
+    public int max(List<Integer> integerList)
     {
 
         //check if the list is empty
         if (integerList.isEmpty()) {
             System.out.println("There are no numbers in the list");
+            return 0;
         }
         //print the max integer
         else
         {
-            System.out.printf("The maximum is %d%n", Collections.max(integerList));
+            return Collections.max(integerList);
         }
 
 
     }
 
 
-    private void min(ArrayList<Integer> integerList)
+    public int min(List<Integer> integerList)
     {
         //check if the list is empty
         if (integerList.isEmpty()) {
             System.out.println("There are no numbers in the list%n");
+            return 0;
         }
         //print the min integer
         else
         {
-            System.out.printf("The minimum is %d%n", Collections.min(integerList));
+            return Collections.min(integerList);
         }
     }
 
-    private void std(ArrayList<Integer> integerList, double average)
+    public double std(ArrayList<Integer> integerList, double average)
     {
         double standardDev = 0;
 
@@ -144,8 +152,8 @@ public class Solution36 {
         double sqrRoot = standardDev / integerList.size();
         //find the standard dev.
         standardDev = Math.sqrt(sqrRoot);
-        //print the standard dev.
-        System.out.printf("The standard deviation is %.2f%n", standardDev);
+        //return the standard dev.
+        return standardDev;
 
     }
 

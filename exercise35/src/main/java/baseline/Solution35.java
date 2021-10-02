@@ -86,7 +86,7 @@ public class Solution35 {
         return random.nextInt(playerList.size());
     }
 
-    private String getWinner(int number, ArrayList<String> playerList)
+    public String getWinner(int number, ArrayList<String> playerList)
     {
         //get the name of the winning player/index
         return playerList.get(number);

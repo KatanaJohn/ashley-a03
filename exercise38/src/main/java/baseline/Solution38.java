@@ -22,12 +22,13 @@ public class Solution38 {
 
     public static void main(String[] args)
     {
+        //create solution
         Solution38 solution = new Solution38();
-
+        //create list of numbers
         int[] numbersList = solution.promptNewList();
-
+        //filter out even numbers from the list
         numbersList = solution.filterEvenNumbers(numbersList);
-
+        //print the list of remaining numbers
         solution.printNewList(numbersList);
 
     }
@@ -48,7 +49,7 @@ public class Solution38 {
         return numberArray;
     }
 
-    private int[] filterEvenNumbers(int[] numbersList)
+    public int[] filterEvenNumbers(int[] numbersList)
     {
         //check for each number in the list
         for(int i = 0; i < numbersList.length;)

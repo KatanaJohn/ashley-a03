@@ -1,7 +1,7 @@
 
-S	java:S106&"9Replace this use of System.out or System.err by a logger.(á¹²Æşÿÿÿÿ
-Z	java:S106."9Replace this use of System.out or System.err by a logger.(Ã”…ªûÿÿÿÿ8Á×È½Ã/
-U	java:S106["9Replace this use of System.out or System.err by a logger.(µÛû¾8Â×È½Ã/
-U	java:S106^"9Replace this use of System.out or System.err by a logger.(ûÃ°8‡éÈ½Ã/
-r	java:S127H"XRefactor the code in order to not assign to this loop counter from within the loop body.(³±şèúÿÿÿÿ
-m	java:S127Q"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(á¹²Æşÿÿÿÿ
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(Ã”…ªûÿÿÿÿ8Á×È½Ã/
+U	java:S106\"9Replace this use of System.out or System.err by a logger.(µÛû¾8Â×È½Ã/
+U	java:S106_"9Replace this use of System.out or System.err by a logger.(ûÃ°8‡éÈ½Ã/
+r	java:S127I"XRefactor the code in order to not assign to this loop counter from within the loop body.(³±şèúÿÿÿÿ
+m	java:S127R"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ

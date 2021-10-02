@@ -1,10 +1,12 @@
 
-S	java:S1065"9Replace this use of System.out or System.err by a logger.(İÎ¤Âşÿÿÿÿ
-M	java:S106D"9Replace this use of System.out or System.err by a logger.(¡›Â
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ÿåô¾ûÿÿÿÿ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(êşëÙıÿÿÿÿ
+M	java:S106,"9Replace this use of System.out or System.err by a logger.(ˆâG
+N	java:S1060"9Replace this use of System.out or System.err by a logger.(Öáâƒ
+S	java:S106="9Replace this use of System.out or System.err by a logger.(İÎ¤Âşÿÿÿÿ
+M	java:S106L"9Replace this use of System.out or System.err by a logger.(¡›Â
 
-S	java:S106`"9Replace this use of System.out or System.err by a logger.(ÿåô¾ûÿÿÿÿ
-N	java:S106k"9Replace this use of System.out or System.err by a logger.(À§ı
-S	java:S106p"9Replace this use of System.out or System.err by a logger.(ø»Ğ„şÿÿÿÿ
-N	java:S106{"9Replace this use of System.out or System.err by a logger.(Á‰“â
-O	java:S106€"9Replace this use of System.out or System.err by a logger.(³¨—Ô
-O	java:S106”"9Replace this use of System.out or System.err by a logger.(Öáâƒ
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(À§ı
+V	java:S106‚"9Replace this use of System.out or System.err by a logger.(Á‰“â8¿®Ü™Ä/
+
+java:S1319Œ"kThe type of "integerList" should be an interface such as "List" rather than the implementation "ArrayList".(ã¿´Œÿÿÿÿÿ8™¹ñ™Ä/

@@ -12,7 +12,9 @@ class Solution35Test {
     @Test
     void testWinner()
     {
-        ArrayList<String> playerList = new ArrayList<>(10);
+        Solution35 solution = new Solution35();
+
+        ArrayList<String> playerList = new ArrayList<>(9);
         playerList.add("Li");
         playerList.add("Juan");
         playerList.add("Fatemah");
@@ -22,6 +24,10 @@ class Solution35Test {
         playerList.add("Esin");
         playerList.add("Guillermo");
         playerList.add("Hollander");
+
+        String expected = "Hollander";
+        String actual = solution.getWinner(8, playerList);
+        assertEquals(expected, actual);
 
 
     }
