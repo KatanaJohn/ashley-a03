@@ -9,6 +9,7 @@ ask for difficulty
 generate a random number
 create a function for the guessing and use a while loop.
 create a function asking to play again
+have a do while loop with boolean playAgain
  */
 
 
@@ -23,6 +24,31 @@ public class Solution32 {
 
 
     public static void main(String[] args)
+    {
+
+    }
+
+    private int askForDifficulty()
+    {
+
+    }
+
+    private int generateAnswer()
+    {
+
+    }
+
+    private void playGuessingGame(int answer)
+    {
+
+    }
+
+    private boolean checkGuess(int answer, int guess)
+    {
+        
+    }
+
+    private boolean askToPlayAgain()
     {
 
     }
