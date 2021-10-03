@@ -5,17 +5,17 @@
 
 
 /*
-
+create a hash map that stores 4 strings
+manually add the first name, last name, position, and separation date (since we're looking at a specific set of names/positions/dates
+print out the hash map
  */
 
 
 package baseline;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
-
-
-
 
 
 public class Solution39 {
@@ -24,6 +24,16 @@ public class Solution39 {
 
 
     public static void main(String[] args)
+    {
+
+    }
+
+    private HashMap createEmployeeRecords()
+    {
+
+    }
+
+    private void printEmployeeRecords()
     {
 
     }
