@@ -30,7 +30,7 @@ public class Solution39 {
 
     private HashMap createEmployeeRecords()
     {
-
+        HashMap<String, String> employeeRecords = new HashMap<String, String>();
     }
 
     private void printEmployeeRecords()
