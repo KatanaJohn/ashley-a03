@@ -31,7 +31,7 @@ public class Solution34 {
         int nEmployees = 5;
 
         //initialize list
-        List employeesList;
+        List<String> employeesList;
         //create list of employees
         employeesList = solution.createEmployeesList();
         //display the employees before removing one
@@ -46,9 +46,9 @@ public class Solution34 {
         solution.displayEmployees(nEmployees, employeesList);
     }
 
-    private ArrayList createEmployeesList()
+    private ArrayList<String> createEmployeesList()
     {
-        ArrayList employeeList = new ArrayList(5);
+        ArrayList<String> employeeList = new ArrayList<String>(5);
 
         //for this specific exercise we're just adding names manually.
         employeeList.add("Ariana Grande");
@@ -60,7 +60,7 @@ public class Solution34 {
         return employeeList;
     }
 
-    private void displayEmployees(int nEmployees, List employeeList)
+    private void displayEmployees(int nEmployees, List<String> employeeList)
     {
         //display the number of employees
         System.out.printf("There are %d Employees%n", nEmployees);
@@ -72,7 +72,7 @@ public class Solution34 {
         }
     }
 
-    public List removeEmployee(List employeeList, String removedEmployee)
+    public List<String> removeEmployee(List<String> employeeList, String removedEmployee)
     {
 
         //remove the employee from the list
@@ -89,7 +89,7 @@ public class Solution34 {
 
     }
 
-    public int decreaseEmployeeCount(int nEmployees, List employeesList)
+    public int decreaseEmployeeCount(int nEmployees, List<String> employeesList)
     {
         //if an employee was removed, decrease nemployees size. If no employee was removed, just return the same value
         if(employeesList.size() < 5)

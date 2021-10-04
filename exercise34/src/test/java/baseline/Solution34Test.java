@@ -17,14 +17,13 @@ class Solution34Test {
         int nEmployees = 5;
         int expected = 4;
 
-        ArrayList employeeList = new ArrayList(5);
+        List<String> employeeList = new ArrayList<>(5);
         employeeList.add("Ariana Grande");
         employeeList.add("5SOS");
         employeeList.add("BLACKPINK");
         employeeList.add("Queen");
         employeeList.add("Taylor Swift");
-
-
+        employeeList = solution.removeEmployee(employeeList, "Queen");
         int actual = solution.decreaseEmployeeCount(nEmployees, employeeList);
         assertEquals(expected, actual);
     }
@@ -34,7 +33,7 @@ class Solution34Test {
     {
         Solution34 solution = new Solution34();
 
-        ArrayList employeeList = new ArrayList(5);
+        ArrayList<String> employeeList = new ArrayList<>(5);
         employeeList.add("Ariana Grande");
         employeeList.add("5SOS");
         employeeList.add("BLACKPINK");
@@ -44,8 +43,8 @@ class Solution34Test {
         String removedEmployee = "Ariana Grande";
 
         String expected = "5SOS";
-        List actualList = solution.removeEmployee(employeeList, removedEmployee);
-        String actual = (String) actualList.get(0);
+        List<String> actualList = solution.removeEmployee(employeeList, removedEmployee);
+        String actual = actualList.get(0);
 
         assertEquals(expected, actual);
     }
